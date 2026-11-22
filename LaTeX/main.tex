@@ -1,0 +1,53 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=25mm]{geometry}
+\usepackage{booktabs,graphicx,tabularx,array}
+\usepackage[section]{placeins}
+\usepackage{xcolor,xurl}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\artanh}{artanh}
+\DeclareMathOperator{\tr}{tr}
+\allowdisplaybreaks[1]
+\setlength{\emergencystretch}{2em}
+\hypersetup{pdfauthor={Muacca},pdftitle={Adiabatic Endpoint Polarizations for Dirac Fields on Anisotropic Compact Cosmologies: Fock Implementability and Excitation Energy},pdfsubject={Version 1, first release 2026-11-22}}
+\title{Adiabatic Endpoint Polarizations for Dirac Fields on Anisotropic Compact Cosmologies: Fock Implementability and Excitation Energy}
+\author{Muacca}
+\date{Version 1\\First release: 2026-11-22}
+\begin{document}
+\maketitle
+\begin{abstract}
+We propagate an external massless Dirac field between two round ends of an exact biaxial three-sphere cosmology. The instantaneous endpoint splittings give non-Hilbert--Schmidt mixing. With first-order adiabatic endpoint polarizations the expected particle and hole counts are positive and finite, while the sum of their absolute physical endpoint energies weighted by occupation diverges logarithmically in the shell cutoff. Second order makes this energy finite. A uniform two-level estimate gives convergence up to the magnetic lattice edge, and a discrete phase estimate on an interior band supplies the logarithmic lower bound. Interval integration of 551 magnetic pairs plus an analytic ultraviolet tail bounds the two finite counts and the second-order energy. On two intervals of an expanding compact Nil geometry, a separate two-index summation proves failure of instantaneous implementability and convergence at first order. The observables use specified endpoint projections and an external field on each prescribed history.
+\end{abstract}
+\input{sections/sec01}
+\input{sections/sec02}
+\input{sections/sec03}
+\input{sections/sec04}
+\input{sections/sec05}
+\input{sections/sec06}
+\input{sections/sec07}
+\section*{Availability}
+The accompanying repository contains the source, Japanese companion and reproducibility supplement.
+\section*{Acknowledgments}
+The author acknowledges Claude Opus 5.5, Gemini 4 Neon and GPT Astra 6.2 for assistance during preparation of the manuscript in November 2026, including symbolic derivations, implementation, Japanese--English exposition and deterministic figure-generation code. The calculations and figures are reproducible from the supplied mathematical definitions and data. The author takes responsibility for the content and remaining errors.
+
+This work was developed within the informal collaborative project \textbf{DPPU} (\textbf{D}onut-like topology, \textbf{P}lanck-scale compactness, \textbf{P}recession dynamics, \textbf{U}niverse).
+\appendix
+\input{appendices/appA}
+\input{appendices/appB}
+\begin{thebibliography}{99}\small
+\bibitem{avron} J. E. Avron, S. Bachmann, G. M. Graf and I. Klich. Fredholm determinants and the statistics of charge transport. Commun. Math. Phys. 280 (2008), 807--829. Proposition 5. \url{https://arxiv.org/abs/0705.0099}.
+\bibitem{gibbons} G. W. Gibbons. Spectral asymmetry and quantum field theory in curved spacetime. Annals of Physics 125 (1980), 98--116. \url{https://doi.org/10.1016/0003-4916(80)90120-7}.
+\bibitem{vardanyan} T. Vardanyan. Matter-antimatter asymmetry in a rotating universe: Dirac spinors in axisymmetric Bianchi IX cosmology. Phys. Rev. D 113 (2026), 023536. \url{https://arxiv.org/abs/2507.12164}.
+\bibitem{cortez} J. Cortez, B. Elizaga Navascu\'es, M. Mart\'in-Benito, G. A. Mena Marug\'an and J. M. Velhinho. Unitary evolution and uniqueness of the Fock representation of Dirac fields in cosmological spacetimes (2015). \url{https://arxiv.org/abs/1509.09086}.
+\bibitem{navascues} B. Elizaga Navascu\'es, G. A. Mena Marug\'an and S. Prado. Fock quantization of the Dirac field in hybrid quantum cosmology: Relation with adiabatic states (2019). \url{https://arxiv.org/abs/1910.01346}.
+\bibitem{hollands} S. Hollands. The Hadamard condition for Dirac fields and adiabatic states on Robertson--Walker spacetimes. Commun. Math. Phys. 216 (2001), 635--661. \url{https://arxiv.org/abs/gr-qc/9906076}.
+\bibitem{ammann} B. Ammann and C. B\"ar. The Dirac operator on nilmanifolds and collapsing circle bundles. Ann. Global Anal. Geom. 16 (1998), 221--253. \url{https://arxiv.org/abs/math/9801091}.
+\bibitem{paper8} Muacca. Reading the sign of a Nieh--Yan charge on compact spin three-manifolds. v1 (2026). \href{https://doi.org/10.5281/zenodo.24434717}{doi:10.5281/zenodo.24434717}.
+\bibitem{paper10} Muacca. Multiplicity of Real Lorentzian Histories Between Two Round Three-Spheres in Biaxial Bianchi IX with Fixed Scalar Charge. v1 (2026). \href{https://doi.org/10.5281/zenodo.24435081}{doi:10.5281/zenodo.24435081}.
+\end{thebibliography}
+\end{document}

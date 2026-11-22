@@ -1,0 +1,20 @@
+\section{Successive endpoint polarizations}\label{sec:03}
+A pure gauge-invariant quasifree CAR representation is specified here by its occupied subspace, equivalently by the complementary positive projector $P$. For evolution $U$ between endpoints, the two off-diagonal operators $(1-P_f)UP_i$ and $P_f U(1-P_i)$ must be Hilbert--Schmidt for implementability \cite[Prop.~5]{avron}. A blockwise identification of the two projections reduces the two-end version to the single-projection criterion. On each mixed two-dimensional block the absolute values of the two off-diagonal entries agree by unitarity. Their squared norms sum to the expected hole and particle numbers respectively, and we write $S$ for either one-direction total.
+
+Write $B_\mu=1+\mu^2(e^2-1)$, $\lambda=2v\sqrt{B_\mu}$,
+$\vartheta=\operatorname{atan2}(L,\mu e)$ and $p=\mu L$. With
+$R=\exp(-i\vartheta\sigma_y/2)$ the first moving-frame Hamiltonian is
+\[
+ R^\dagger H R-iR^\dagger R'=\chi k\lambda\sigma_z-g\sigma_y,\qquad
+ g=\vartheta'/2=-p e'/(2 B_\mu).
+\]
+The instantaneous polarization is the sign projection in basis $R$ as specified by Eq.~\eqref{eq:physical}. Rotate next by $W_1=\exp(-i\alpha_1\sigma_x/2)$ and then by $W_2=\exp(-i\alpha_2\sigma_y/2)$:
+\begin{align}
+ \tan\alpha_1&=g/(\chi k\lambda), &
+ \Omega_1^2&=(k\lambda)^2+g^2,& h_1&=\alpha_1'/2,\nonumber\\
+ \tan\alpha_2&=-h_1/(\chi\Omega_1),&
+ \Omega_2^2&=\Omega_1^2+h_1^2,& h_2&=\alpha_2'/2 .           \label{eq:rot}
+\end{align}
+Choose the small principal angles. The new Hamiltonians, including their basis derivatives, are $\chi\Omega_1\sigma_z-h_1\sigma_x$ and $\chi\Omega_2\sigma_z-h_2\sigma_y$. On a mixed block the first and second endpoint projectors are the positive projection of $\chi\sigma_z$ conjugated by $RW_1$ and $RW_1W_2$, respectively; low blocks retain their ranks from Section~\ref{sec:02}. The endpoints differ in their first rotation even though the intrinsic metrics agree.
+
+For either sign-changing block define its excitation energy as the sum of its particle and hole occupations weighted by the absolute endpoint physical eigenvalues. Both occupations equal the transition probability, so the dimensionless combined weight is $|c_e+2k|+|c_e-2k|=4k$. This definition assigns the continued positive and negative labels their respective endpoint energy magnitudes. If one took the expectation of the full endpoint Hamiltonian in the rotated basis, off-diagonal coherences could also enter; that is another measurement. Opposite chiralities are conjugate after removing the scalar phase, and $\mu\mapsto-\mu$ is conjugation of the original matrix by $\sigma_x$. Summing the two signs of $M$, the two chiralities and all spectators gives $8k|\beta|^2$ for one direction at one positive magnetic label. Its contribution to $q_e\Delta E$ is $32k^2|\beta|^2$.

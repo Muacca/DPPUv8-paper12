@@ -1,0 +1,14 @@
+\section{A third-order comparison}\label{app:B}
+For $\chi=+1$ set $\omega_0=\lambda$, $T_1=F$. Defining successive rotation angles by $\tan\alpha_m=p\epsilon^m T_m$, the iteration is
+\[
+ d_m=1+p^2\epsilon^{2m}T_m^2,\qquad
+ \omega_m=\omega_{m-1}\sqrt{d_m},\quad J_m=\frac{T_m'}{2d_m},\quad
+ T_{m+1}=(-1)^m\,J_m/\omega_m .
+\]
+The sign alternates as the rotations use the $x$ and $y$ axes in turn. The residual is $h_m=p\epsilon^mJ_m$. Positivity of $\omega_m$ on the compact parameter box gives $|\beta_3|\le C_3|p|/k^4$ by the same integration by parts. This faster ultraviolet falloff does not order the total occupations. Using $K=32$ (991 positive magnetic pairs) in both the order-two and order-three calculation, including the corresponding unbounded tails, gives
+\[
+ 2.02282\le S_3/S_2\le2.02964,\qquad
+ 1.25775\le\Delta E_3/\Delta E_2\le1.31281 .
+\]
+For example, the $k=2$ one-direction shell count changes from
+$3.19231\times10^{-6}$ to $8.07695\times10^{-6}$. At order three it already accounts for more than $98\%$ of the total. The archive contains the independent $K=32$ computation with 200-bit arithmetic, 40 cells per time half and degree 37. Comparison at successive orders on one history gives no monotonicity principle or convergence prescription for an infinite sequence of vacua.

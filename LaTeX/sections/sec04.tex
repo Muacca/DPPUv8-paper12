@@ -1,0 +1,46 @@
+\section{Ultraviolet estimates on the sphere}\label{sec:04}
+\begin{theorem}
+For the return \eqref{eq:exact} the instantaneous transport fails the Hilbert--Schmidt criterion. The first- and second-order transports are Hilbert--Schmidt, with positive one-direction counts. For the first order $q_e\Delta E(k\le K)=\Theta(\log K)$; for the second the energy converges. At each endpoint orders one and two define equivalent Fock representations while orders zero and one are inequivalent.
+\end{theorem}
+\begin{proof}
+Put $\epsilon=1/k$, $F=-e'/(2B_\mu\lambda)$, so $g=p\lambda F$. Let $\omega_i=\Omega_i/k$. The factorizations
+\begin{align}
+ H&=\frac{F'}{2(1+\epsilon^2p^2F^2)},\qquad V=H/\omega_1,
+ &J&=-\frac{V'}{2(1+\epsilon^4p^2V^2)},\nonumber\\
+ h_1&=\chi\epsilon p H,\quad \tan\alpha_2=-\epsilon^2p V,
+ & h_2&=\epsilon^2pJ                                             \label{eq:jets}
+\end{align}
+hold on the whole magnetic grid. All coefficients after factoring out $p$ have bounded time derivatives on the compact set $|s|\le D/2,\ |\mu|\le1,\ 0\le\epsilon\le1/2$. The gaps $\omega_i$ have a positive lower bound there. Thus bounds obtained from \eqref{eq:jets} are uniform even within one magnetic lattice step of $|M|=k$.
+
+Remove the diagonal phase $\Psi_m(t)=\int_i^t\Omega_m$ from order $m=1,2$. Up to a constant of unit modulus the positive amplitude starting in the negative leg obeys $a_+'=h_m e^{2i\chi\Psi_m}a_-$. Both amplitudes have modulus at most one and $|a_-'|\le |h_m a_+|$. Integration by parts gives
+\begin{align}
+ |a_+(t)|\le\tfrac12\left(
+ |h_m/\Omega_m|_i+|h_m/\Omega_m|_t+
+ \int_i^t \left[|(h_m/\Omega_m)'|+|h_m^2/\Omega_m|\right]ds
+ \right).                                                     \label{eq:ibp}
+\end{align}
+Consequently $|\beta_1|\le C|p|/k^2$ and $|\beta_2|\le C'|p|/k^3$. There are $O(k)$ labels and $O(k)$ copies per label. The first-order contribution to $S$ is $O(k^{-2})$ per shell; the second-order energy contribution is $O(k^{-3})$. Positivity of a single shared low shell follows independently from the enclosures in Section~\ref{sec:05}. For the endpoint representations, $|\alpha_2|\le C|p|/k^2$ ensures summability of $\sin^2(\alpha_2/2)$ with multiplicities. At either endpoint $g/\lambda$ is bounded away from zero on $I=[2/5,1/2]$. There $\sin^2(\alpha_1/2)\ge c/k^2$ and a positive fraction of all labels belongs to the band. The endpoint comparison of orders zero and one diverges.
+
+For instantaneous \emph{transport}, interference between the two endpoints must still be controlled. On the exact sequence $k=2n,\ M=n$ use the rotated Hamiltonian with residual $g$. One integration by parts gives $a_+=O(k^{-1})$ on the entire interval, and a second integration in the remainder gives
+\[
+ a_+(f)=\frac{\zeta}{2ik}\left[\frac{g_f}{\lambda_f}e^{2ik\Phi}
+                 -\frac{g_i}{\lambda_i}\right]+O(k^{-2}),
+ \quad \Phi(\mu)=\int_i^f\lambda(s,\mu)\,ds,\quad |\zeta|=1
+\]
+for one chirality. Here potential errors from differentiating $a_-$ are controlled by $|a_-'|\le|g a_+|$. Since $g_i=-g_f$ and $\lambda_i=\lambda_f$, this sequence alone gives a positive multiple of $\sum_{n\le N}\cos^2(2n\Phi)/n+O(1)$ after including spectators. For $e^{4i\Phi}=1$ the squared cosine is one; otherwise the oscillatory part of the harmonic sum is bounded by the geometric-series estimate. Either way the sum diverges.
+
+The remaining lower bound requires averaging over magnetic labels. From \eqref{eq:ibp}, $a_--1=O(p^2/k^3)$ in the first-order diagonal interaction frame for the initial occupied leg. Integrating the derivative remainder by parts once more, using that $h_1/\Omega_1$ is even in $s$ and $\Psi_1(f)=k\Phi+O(k^{-1})$, gives
+\begin{equation}
+ |\beta_1|=\frac{|p F'_f|}{2k^2\lambda_f}|\sin(k\Phi(\mu))|
+                  + O(|p|/k^3).                               \label{eq:leading}
+\end{equation}
+At the endpoint $b''_f=0$ and
+\[
+ F'_f=-\frac{3}{4r}\big[3(1-3\mu^2)(b_f')^2-(v'_f/v_f)b'_f\big].
+\]
+The ratio $(v'_f/v_f)/b'_f=3Z/(Z-Y)>3$ with $Z=z\tanh(zD)>Y=y\tanh(yD)>0$. The prefactor apart from $k^{-2}$ is bounded below on $I$. Now $\Phi'(\mu)=\int 2v\mu(e^2-1)/\sqrt{B_\mu}$, and $\Phi''=\int 2v(e^2-1)/B_\mu^{3/2}>0$. On $I$, $2\Phi'$ stays uniformly between zero and $2\pi$: here $D<1.22$, $v<1$, $e^2-1\le e^{0.03}-1$. Therefore the increments of $\theta_M=2k\Phi(M/k)$ increase and stay separated from multiples of $2\pi$. Summation by parts, writing $e^{i\theta_M}=(e^{i\theta_{M+1}}-e^{i\theta_M})/(e^{i(\theta_{M+1}-\theta_M)}-1)$, bounds the oscillatory sum independently of $k$. The denominator inverse has bounded total variation because its argument lies in a fixed compact subinterval of $(0,2\pi)$. Hence
+\[
+ \sum_{M/k\in I}\sin^2(k\Phi(M/k))=k|I|/2+O(1).
+\]
+The uniform $O(k^{-5})$ error after squaring \eqref{eq:leading}, and the positive energy and spectator weights of order $k^2$, give a lower bound $c/k$ per sufficiently large shell. The upper bound $C/k$ follows from \eqref{eq:ibp} over all labels. Half-integral shell spacing then gives the claimed logarithm.
+\end{proof}

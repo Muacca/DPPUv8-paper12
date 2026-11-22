@@ -1,0 +1,28 @@
+\section{Certified low shells and the infinite tail}\label{app:A}
+To evaluate Table~\ref{tab:numeric} we split harmonic time into 64 cells of width $\delta=D/64$. In a cell's rescaled real variable $t$, write the Taylor series for one column of the propagator. The coefficients obey
+\[
+ (m+1)Y_{m+1}=-i\delta\sum_{j=0}^m H_jY_{m-j}.
+\]
+We retain degrees 0 through 31, reconstructing the other column by the $SU(2)$ conjugation relation. For complex time within radius $\rho=1/5$ of a real basepoint, $\lvert v\rvert\le v_* = z/\cos(2z\rho)$ since $\lvert\cosh(x+iy)\rvert\ge|\cos y|$ in this strip. Similarly $\lvert v^2/u\rvert\le v_*^2\cosh(2y(D/2+\rho))/y$. Let $H_*$ be twice the sum of these bounds; the complex propagator norm is at most $\exp(\rho kH_*)$. The bound on the tail of the series on one step is therefore
+\[
+ \varepsilon_k=e^{\rho kH_*}(\delta/\rho)^{32}/(1-\delta/\rho).
+\]
+Real evolution is unitary, so replacing one exact step at a time in the matrix product gives total truncation error at most $(1+\varepsilon_k)^{64}-1$. Apply this to the projected amplitudes before squaring. All arithmetic, elementary functions and endpoint rotations in the enclosure use 180-bit real or complex balls (Arb via python-flint). The positive root for $D$ is isolated by bisection and an interval sign test. The fast real-time DOP853 integrations on representative rays provide a separate check of the spin and derivative signs.
+
+For $k>K=24$, partition the positive half-time interval into 96 pieces and $0\le\mu\le1$ into 20 pieces, taking $0\le\epsilon\le1/K$ as one full interval. Parity and the explicit factors in \eqref{eq:jets} cover the other half and negative labels. For the normalized coefficients in that equation, the interval Taylor derivatives bound $|V_f|$ by $B_*=0.012979$ and
+\[
+ |J/\omega_2|_f+\tfrac12\int_i^f\Bigl(|(J/\omega_2)'|+
+                  K^{-2}|J^2/\omega_2|\Bigr)ds\le C_*=0.084778.
+\]
+Equation~\eqref{eq:ibp} and the endpoint basis rotations imply $|\beta_2|\le |p|C_*/k^3$, $|\beta_1|\le |p|(B_*/k^2+C_*/k^3)$. To see the second estimate, insert the order-two endpoint bases into the order-one transition. The difference of each endpoint unitary from the identity has norm at most $|\alpha_2|/2$; the error is the sum of the initial and final bounds. For the full magnetic grid,
+\[
+ \sum_{M=-k}^k p^2=\frac{4k^4-5k^2+1}{15k^3}\le4k/15 .
+\]
+This identity follows by subtracting the fourth-power sum divided by $k^4$ from the square sum divided by $k^2$ on the unit-spaced grid; it includes both half-integral and integral $k$. Multiplication by two chiralities and $2k$ spectators and comparison of the half-integer shell sum with twice the integral gives
+\begin{align}
+ S_{1,>K}&\le\frac{32}{15}\left[\frac{B_*^2}{K}
+             +\frac{B_*C_*}{K^2}+\frac{C_*^2}{3K^3}\right],&
+ S_{2,>K}&\le\frac{32C_*^2}{45K^3},\nonumber\\
+ q_e\Delta E_{2,>K}&\le\frac{64 C_*^2}{15K^2}.
+\end{align}
+For the displayed bounds we used the unrounded interval constants. The supplied code generates the mode labels and the high-mode enclosure independently of the saved tables. A second routine checks the tables by reassembling all 551 mode weights and comparing them with the finite sums.

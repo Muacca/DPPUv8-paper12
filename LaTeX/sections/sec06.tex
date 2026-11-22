@@ -1,0 +1,36 @@
+\section{A two-index test on compact Nil}\label{sec:06}
+A compact quotient of the Heisenberg group provides a case in which central momentum and oscillator number can grow independently. Write the horizontal radius as $a$, the central radius as $c_N$, and $W=a^2c_N$, with $d\tau=W ds$. Take the standard lattice with Euler number $r_N=1,2$, reference volume $(2\pi)^4/r_N$, and brackets $[e_1,e_2]=(c_N/a^2)e_3$. For $r_N=1$ we take spin structures $(0,0,0)$ and $(1/2,0,0)$; for $r_N=2$ we take $(0,0,0)$ and $(0,0,1/2)$. The fixed-charge data and Clifford orientation are those of Paper~08 \cite{paper8}. The oscillator decomposition for compact Heisenberg quotients is standard \cite{ammann}.
+
+Choose an expanding, initially isotropic velocity at $s=0$, $a(0)=c_N(0)=1$, $h_H=0,1$ for the minimal and real Holst cases, and signed $u_0=\pm1/8,\pm3/8$. With $d_H=1+h_H^2$, the fixed flux is $p_\theta=-Q_\Sigma=6V_\Sigma u_0$ and $\kappa^2 W\,d\theta/d\tau=d_Hu_0$. The Hamiltonian constraint gives $H^2=d_Hu_0^2+1/12$, $H>0$. Spatial Ricci eigenvalues $(-t^2,-t^2,t^2)/2$, $t=c_N/a^2$, give $(\log a)''=c_N^4/2$, $(\log c_N)''=-c_N^4/2$. Thus, defining $D_N=\sqrt{H^2+1/4}$,
+\begin{equation}
+ E=ac_N=e^{2Hs},\quad Y=c_N^{-2}=\cosh(2D_Ns)-(H/D_N)\sinh(2D_Ns),
+ \quad A_N=a^2=E^2Y .                                      \label{eq:nilbg}
+\end{equation}
+Both intervals $[-1/2,0]$ and $[0,3/2]$ are compact and regular. The following proof concerns the massless field. The massive finite-shell sign readout of Paper~08 also needs a common preparation and detector, and is not an input to the double sum.
+
+For nonzero central label $k=r_N|j+\delta_3|$, $\nu=k/(2\pi)$, a paired level $n\ge1$ has the tracefree harmonic-time Weyl Hamiltonian, up to fixed conjugations,
+\begin{equation}
+ x\sigma_x+z\sigma_z,\qquad x=\sqrt{2\nu n}\,E,\quad z=\nu A_N,
+ \quad \Omega=(x^2+z^2)^{1/2}.                              \label{eq:nilham}
+\end{equation}
+The two central signs together have multiplicity $2k$ in the paired tower. The axial charge reverses a common scalar phase. Energy sign crossings caused by the bounded scalar shift affect only finitely many low modes on these intervals. At central label zero the torus modes have fixed axis since both horizontal lengths coincide; the unpaired lowest central tower is also diagonal. The infinitely many paired levels determine ultraviolet implementability.
+
+\begin{proposition}
+On both intervals, for each specified lattice, spin structure, charge and Holst parameter, the instantaneous endpoint evolution is not implementable. The order-one endpoint prescription gives Hilbert--Schmidt off-diagonal parts.
+\end{proposition}
+\begin{proof}
+Let $L_N=\sqrt{k(k+n)}$, $F_N=\sqrt{kn}/(k+n)$, and $\vartheta=\operatorname{atan2}(x,z)$. The background and finitely many derivatives are uniformly bounded, with positive lower bounds on $A_N,E$. Then $\Omega\asymp L_N$, its finite-order derivatives are $O(L_N)$, and
+\[
+ \vartheta'=2(v_N-H)\frac{xz}{x^2+z^2},\qquad v_N=(\log c_N)',
+ \qquad \partial_s^j\vartheta'=O(F_N).
+\]
+The last assertion follows by factoring the positive coefficients of $x,z$ before differentiating; $xz/(x^2+z^2)\asymp F_N$. In the instantaneous frame the matrix is $\Omega\sigma_z-\vartheta'\sigma_y/2$. The next rotation has magnitude $|\arctan[-\vartheta'/(2\Omega)]|=O(F_N/L_N)$, as do its finite derivatives. Applying integration by parts as in \eqref{eq:ibp} with residual derivative of this angle gives
+\[
+ |\beta_1|=O(F_N/L_N^2),\qquad
+ |\beta_1|^2=O\!\left(\frac{n}{k(k+n)^4}\right).
+\]
+Summing with multiplicity $2k$ first on $k+n=\ell$ leaves $\sum_{\ell}O(\ell^{-2})$. The positive permitted central labels here are integer lattices or their parity subsequences. Other fixed finite multiplicity factors do not affect convergence.
+
+For the converse, one endpoint of each interval is $s=0$, where $v_N=H$ and the instantaneous and first-order axes coincide. At the other end $v_N-H\ne0$ since $v_N'=-c_N^4/2<0$. On $1\le n/k\le2$ the nonzero mismatch angle, divided by two, has magnitude $|\vartheta'|/(4\Omega)+O(k^{-3})\ge c/k$ for large $k$. The first-order transport error is $O(k^{-2})$ there. With only one mismatched end its oscillatory phase cannot cancel this leading mixing. A shell with central label $k$ contains order $k$ such oscillator labels and order $k$ copies at each, so its instantaneous squared sum is bounded below by a positive constant. Both parity subsequences have positive density. This proves divergence for both directions.
+\end{proof}
+As a check, for $u_0=3/8$, $h_H=0$, $[0,1.5]$, one copy at $k=n=1$ gives probabilities $0.0279303$ and $0.0169350$. At $k=n=128$ the corresponding direct values are $1.8407\times10^{-7}$ and $4.8238\times10^{-11}$. These sample probabilities are numerical diagnostics of Eq.~\eqref{eq:nilham}; the double-series test uses uniform inequalities over the unbounded tower.
